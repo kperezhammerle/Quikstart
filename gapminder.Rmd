@@ -1,0 +1,59 @@
+---
+title: "Gapminder-dplyr"
+author: "KV"
+date: "6/18/2019"
+output: html_document
+---
+Loading tidyverse
+```{r}
+library(tidyverse)
+```
+
+Load Data
+```{r data}
+#loading gapminder dataset from github
+gapminder <- read.csv("https://raw.githubusercontent.com/OHI-Science/data-science-training/master/data/gapminder.csv")
+```
+```{r}
+head(gapminder)
+tail(gapminder)
+#str()-stands for structure
+str(gapminder)
+
+#column names
+names(gapminder)
+ncol(gapminder)
+```
+
+Look at individual dataframe individuals
+```{r}
+#to show one column use $
+gapminder$lifeExp
+gapminder$continent
+```
+
+Learning the "filter()" function
+
+```{r}
+filter(gapminder, lifeExp<35)
+
+#just look at mexico
+filter(gapminder, country=="Mexico", year==2002)
+```
+
+```{r}
+#Brasil between 1987 and 2007
+gapminder$lifeExp
+
+filter(gapminder, country=="Brazil", )
+brazil_life.exp <- filter(gapminder, country=="Brazil", year>1986)
+brazil_life.exp
+mean(brazil_life.exp$lifeExp)
+```
+
+
+
+
+
+
+
