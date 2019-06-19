@@ -7,4 +7,20 @@ output: html_document
 
 ## Learning ggplot2
 
-# It's going to be amazing!
+# It's going to b amazing!
+
+Load tidyverse.
+```{r}
+
+```
+
+```{r tidyverse}
+library (tidyverse)
+
+```
+
+```{r data}
+ohi_data<-read_csv("https://raw.githubusercontent.com/OHI-Science/data-science-training/master/data/OHI_global_data.csv")
+```
+
+
